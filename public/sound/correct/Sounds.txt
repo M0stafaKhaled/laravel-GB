@@ -1,0 +1,14 @@
+
+// Register
+
+for(var i=0 ;i<6;i++){
+	createjs.Sound.registerSound("audio/correct/game  0"+(i+5)+".mp3","correct"+String(i));
+}
+for(var i=0 ;i<4;i++){
+	createjs.Sound.registerSound("audio/wrong/game  0"+(i+1)+".mp3","incorrect"+String(i));
+}
+ 
+// play random 
+createjs.Sound.play("correct"+String(Math.floor(Math.random() * 6) ));
+
+createjs.Sound.play("incorrect"+String(Math.floor(Math.random() * 4)) );
